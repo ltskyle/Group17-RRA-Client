@@ -75,19 +75,26 @@ nav ul li a:hover::after{
 #our-services{
     text-align: center;
     font-family: "Verdana", Times, serif;
+    font-size: 60px;
 }
 #or-header{
+    margin-top: 20px;
+    text-align: center;
     padding-top: 10px;
     padding-left: 20px;
 }
 #pt-header{
+    text-align: center;
+    padding-top: 10px;
     padding-left: 20px;
 }
 #pt-desc{
+    text-align: center;
     padding-left: 30px;
     padding-bottom: 5px;
 }
 #or-desc{
+    text-align: center;
     padding-left: 30px;
     padding-bottom: 5px;
 }
@@ -117,4 +124,26 @@ nav ul li a:hover::after{
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
+}
+
+#schedule-btn{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.myButton{
+    box-shadow:inset 0px 1px 0px 0px #5c0096;
+	background:linear-gradient(to bottom, #5c0096 5%, #5c0096 100%);
+	background-color:#5c0096;
+	border-radius:6px;
+	border:1px solid #5c0096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5c0096;
 }
