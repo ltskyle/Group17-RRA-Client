@@ -72,3 +72,32 @@ nav ul li a:hover::after{
 #signup-btn{
     color: #5c0096;
 }
+#all{
+    text-align: center;
+    margin: 30px;
+}
+#marg{
+    margin: 15px;
+}
+
+#myButton{
+    box-shadow:inset 0px 1px 0px 0px #5c0096;
+	background:linear-gradient(to bottom, #5c0096 5%, #5c0096 100%);
+	background-color:#5c0096;
+	border-radius:6px;
+	border:1px solid #5c0096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5c0096;
+    margin: 5px;
+}
+#bio{
+    position: relative;
+    bottom: 60px;
+}
