@@ -26,3 +26,28 @@
     margin-left: auto;
     margin-right: auto;
 }
+#singup{
+	box-shadow:inset 0px 1px 0px 0px #5c0096;
+	background:linear-gradient(to bottom, #5c0096 5%, #5c0096 100%);
+	background-color:#5c0096;
+	border-radius:6px;
+	border:1px solid #5c0096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5c0096;
+    margin: 5px;
+	
+}
+#login-btn{
+	margin-top: 40px;
+	text-align: center;
+}
+#buffer{
+	margin-top: 10px;
+}

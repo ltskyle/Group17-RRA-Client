@@ -73,11 +73,21 @@ nav ul li a:hover::after{
     color: #5c0096;
 }
 
-#cal-btn{
+#header-txter{
+   margin-top: 15px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+}
+#all{
+    text-align: center;
+    margin: 30px;
+}
+#marg{
+    margin: 15px;
 }
 
-.myButton{
+#myButton{
     box-shadow:inset 0px 1px 0px 0px #5c0096;
 	background:linear-gradient(to bottom, #5c0096 5%, #5c0096 100%);
 	background-color:#5c0096;
@@ -93,45 +103,4 @@ nav ul li a:hover::after{
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5c0096;
     margin: 5px;
-}
-#get-info-header{
-    text-align: center;
-    margin-top: 30px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 35px;
-}
-
-#center{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#TypeOfService{
-    margin: 5px;
-}
-
-#TherapistName{
-    margin: 5px;
-}
-
-#info-header{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 35px;
-    margin-top: 30px;
-}
-#times{
-    text-align: center;
-    margin-top: 5px;
-}
-#add-btn{
-    text-align: center;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.add-btn{
-    text-align: center;
-    margin-top: 5px;
 }

@@ -59,6 +59,7 @@ const getLogin = async () => {
             ) {
                 isClient = true
             } else {
+                alert("Account does not exist. Try again or sign up!")
                 isClient = false
             }
             if (isClient) {
