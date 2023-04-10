@@ -10,6 +10,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <script src="./scripts/makeSchedule.js"></script>
+    <script type="text/javascript">
+      window.onload=function(){
+      var today = new Date().toISOString().split('T')[0];
+      document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);}
+    </script> 
+  
   </head>
 <body>
     <div class="container">
@@ -35,7 +41,7 @@
         <p>Please select a date</p>
       </div>
       <div id="cal-btn">
-            <input id="myDate" onblur="getVal()" type="date">
+            <input name="setTodaysDate" id="myDate" onblur="getVal()" type="date">
             <button type="button" class="myButton" onclick="getScheduleInfo()">Confirm Date</button>
         </div>
         <div id="stuff">

@@ -1,4 +1,5 @@
 const therapistURL = 'https://localhost:7202/api/therapist'
+let user = JSON.parse(localStorage.getItem('myUser'))
 
 function check() {
     var input = document.getElementById('repeatPassword')

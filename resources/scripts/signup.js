@@ -1,4 +1,5 @@
 const clientURL = 'https://localhost:7202/api/client'
+let user = JSON.parse(localStorage.getItem('myUser'))
 
 function check(){
     var input = document.getElementById('repeatPassword')

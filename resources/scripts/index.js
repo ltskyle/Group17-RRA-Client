@@ -20,52 +20,54 @@ const getLogin = async () => {
             return response.json()
         })
         .then(function (data) {
-            if (
-                data.find((data) => data.adminEmail == login.email) &&
-                data.find((data) => data.adminPassword == login.password)
-            ) {isAdmin = true}
-            else {isAdmin = false}
-            if (isAdmin) {
+            let user =
+                data.find((data) => data.clientEmail == login.email) &&
+                data.find((data) => data.clientPassword == login.password)
+            if (user) {
+                isAdmin = true
+                localStorage.setItem('myUser', JSON.stringify(user))
                 window.location.replace('Admin.html')
-            }  
+            } else {
+                isAdmin = false
+            }
         })
     await fetch(therapistURL)
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
-            console.log(data)
-            console.log(login)
-            if (
-                data.find((data) => data.therapistEmail == login.email) &&
-                data.find((data) => data.therapistPassword == login.password)
-            ) {
+            let user =
+                data.find((data) => data.clientEmail == login.email) &&
+                data.find((data) => data.clientPassword == login.password)
+            if (user) {
                 isTherapist = true
+                localStorage.setItem('myUser', JSON.stringify(user))
+                window.location.replace('TherapistLogin.html')
             } else {
                 isTherapist = false
-            }
-            if (isTherapist) {
-                window.location.replace('TherapistLogin.html')
             }
         })
     await fetch(clientURL)
         .then(function (response) {
             return response.json()
         })
-        .then(function (data) {
-            if (
+        .then(async function (data) {
+                let user =
                 data.find((data) => data.clientEmail == login.email) &&
                 data.find((data) => data.clientPassword == login.password)
-            ) {
+            if(user){
                 isClient = true
-            } else {
-                alert("Account does not exist. Try again or sign up!")
-                isClient = false
-            }
-            if (isClient) {
+                localStorage.setItem('myUser', JSON.stringify(user))
                 window.location.replace('ClientLogin.html')
-            }
+
+                } else {
+                    alert('Account does not exist. Try again or sign up!')
+                    isClient = false
+                }
         })
 
 }
 
+function clearStorage(){
+    localStorage.clear()
+}
