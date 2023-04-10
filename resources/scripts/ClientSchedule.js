@@ -10,6 +10,7 @@ async function getVal() {
         })
         .then(function (data) {
             makeTable(data, date)
+            console.log(user)
         })
 }
 
@@ -50,7 +51,7 @@ const makeTable = (dates, datePicked) => {
     tr.appendChild(th5)
 
     dates.forEach((date) => {
-        if (date.date == datePicked) {
+        if (date.date == datePicked && date.accepted == 'false') {
             let tr = document.createElement('TR')
             tableBody.appendChild(tr)
 
@@ -66,17 +67,21 @@ const makeTable = (dates, datePicked) => {
 
             let td3 = document.createElement('TD')
             td3.width = 250
-            td3.appendChild(document.createTextNode(`${date.typeOfService}`))
+            td3.appendChild(
+                document.createTextNode(`${date.typeOfService}`)
+            )
             tr.appendChild(td3)
 
             let td4 = document.createElement('TD')
             td4.width = 250
-            td4.appendChild(document.createTextNode(`${date.therapistName}`))
+            td4.appendChild(
+                document.createTextNode(`${date.therapistName}`)
+            )
             tr.appendChild(td4)
 
             let btn = document.createElement('BUTTON')
             btn.className = 'btn-info'
-            btn.class = "accept"
+            btn.class = 'accept'
             btn.id = `${date.scheduleID}`
             btn.style = 'margin: 5px'
             btn.onclick = () => {

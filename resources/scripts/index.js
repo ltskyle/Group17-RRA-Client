@@ -21,8 +21,8 @@ const getLogin = async () => {
         })
         .then(function (data) {
             let user =
-                data.find((data) => data.clientEmail == login.email) &&
-                data.find((data) => data.clientPassword == login.password)
+                data.find((data) => data.adminEmail == login.email) &&
+                data.find((data) => data.adminPassword == login.password)
             if (user) {
                 isAdmin = true
                 localStorage.setItem('myUser', JSON.stringify(user))
@@ -37,8 +37,8 @@ const getLogin = async () => {
         })
         .then(function (data) {
             let user =
-                data.find((data) => data.clientEmail == login.email) &&
-                data.find((data) => data.clientPassword == login.password)
+                data.find((data) => data.therapistEmail == login.email) &&
+                data.find((data) => data.therapistPassword == login.password)
             if (user) {
                 isTherapist = true
                 localStorage.setItem('myUser', JSON.stringify(user))
