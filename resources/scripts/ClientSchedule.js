@@ -1,5 +1,5 @@
 const scheduleURL = 'https://localhost:7202/api/schedule'
-let app = document.getElementById('app')
+let app = document.getElementById('id')
 
 async function getVal() {
     const input = document.querySelector('input')
@@ -10,11 +10,11 @@ async function getVal() {
         })
         .then(function (data) {
             makeTable(data, date)
-            console.log(user)
         })
 }
 
 const makeTable = (dates, datePicked) => {
+    document.getElementById('id').innerHTML = ''
     let table = document.createElement('TABLE')
     table.border = '.5'
     table.id = 'songTable'
