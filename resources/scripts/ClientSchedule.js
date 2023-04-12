@@ -1,5 +1,7 @@
 const scheduleURL = 'https://localhost:7202/api/schedule'
+const appointmentURL = 'https://localhost:7202/api/appointments'
 let app = document.getElementById('id')
+// let user = JSON.parse(localStorage.getItem('myUser'))
 
 async function getVal() {
     const input = document.querySelector('input')
@@ -14,6 +16,7 @@ async function getVal() {
 }
 
 const makeTable = (dates, datePicked) => {
+    console.log(user)
     document.getElementById('id').innerHTML = ''
     let table = document.createElement('TABLE')
     table.border = '.5'
@@ -85,7 +88,8 @@ const makeTable = (dates, datePicked) => {
             btn.id = `${date.scheduleID}`
             btn.style = 'margin: 5px'
             btn.onclick = () => {
-                console.log(date.scheduleID)
+                makeAppointment(date.scheduleID)
+                updateScheudle(date.scheduleID)
             }
             btn.width = 100
             btn.appendChild(document.createTextNode('Accept'))
@@ -94,3 +98,67 @@ const makeTable = (dates, datePicked) => {
     })
     app.appendChild(table)
 }
+
+const makeAppointment = async (scheduleID) => {
+    await fetch(scheduleURL)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(async function (data) {
+            finding = data.find((data) => data.scheduleID == scheduleID)
+
+            let appointment = {
+                TypeOfService: finding.typeOfService,
+                Rating: 0,
+                AppointmentAcceptance: 'false',
+                Completed: 'false',
+                AppointmentDate: finding.date,
+                AppointmentCity: user.clientCity,
+                AppointmentState: user.clientState,
+                AppointmentZipCode: user.clientZipCode,
+                TherapistName: finding.therapistName,
+                ClientFirstName: user.clientFirstName,
+                ClientLastName: user.clientLastName
+            }
+            await fetch(appointmentURL, {
+                method: 'POST',
+                headers: {
+                    accept: '*/*',
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify(appointment),
+            })
+        })
+}
+
+const updateScheudle = async (scheduleID) => {
+        const newUrl = `https://localhost:7202/api/schedule/${scheduleID}`
+        await fetch(scheduleURL)
+            .then(function (response) {
+                return response.json()
+            })
+            .then(async function (data) {
+                let acceptSchedule = data.find((data) => data.scheduleID == scheduleID)
+    
+                let acceptedSchedule = {
+                    Date: acceptSchedule.date,
+                    TimeFrame: acceptSchedule.timeFrame,
+                    TypeOfService: acceptSchedule.typeOfService,
+                    TherapistName: acceptSchedule.therapistName,
+                    Accepted: 'true',
+                    ScheduleID: scheduleID
+                }
+                console.log(acceptedSchedule)
+    
+                await fetch(newUrl, {
+                    method: 'PUT',
+                    headers: {
+                        accept: '*/*',
+                        'Content-type': 'application/json',
+                    },
+                    body: JSON.stringify(acceptedSchedule),
+                })
+                alert("Appointment Scheduled")
+                location.reload()
+            })
+    }
