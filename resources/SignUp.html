@@ -88,8 +88,10 @@
                     placeholder="Enter Phone Number"
                     name="phone-number"
                     required
+                    maxlength="9"
                     inputmode="numeric"
-                    oninput="check()"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');check();"
+                    
                 />
                 </div>
                 <div id="marg">
@@ -163,6 +165,8 @@
                     placeholder="Enter Zip Code"
                     name="zipcode"
                     required
+                    maxlength="5"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                 />
                 </div>
                 <p></p>

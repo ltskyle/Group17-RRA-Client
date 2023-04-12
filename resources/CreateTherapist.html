@@ -88,20 +88,12 @@
                     name="phone-number"
                     required
                     inputmode="numeric"
-                    oninput="check()"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');check();"
                 />
                 </div>
                 <div id="marg">
                 <label id="bio" for="bio"><b>Therapist Bio (Max 200 characters)</b></label>
-                <textarea rows="5" cols="33"
-                    id="bio-box"
-                    type="text"
-                    placeholder="Enter Bio"
-                    maxlength="200"
-                    name="bio"
-                    required
-                />
-                </textarea>
+                <textarea rows="5" cols="33"id="bio-box"type="text"placeholder="Enter Bio"maxlength="200"name="bio"required/></textarea>
                 </div>
                 <p></p>
                 <div>
