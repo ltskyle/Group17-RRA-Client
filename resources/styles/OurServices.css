@@ -85,13 +85,12 @@ nav ul li a:hover::after{
 }
 #pt-header{
     text-align: center;
-    padding-top: 10px;
     padding-left: 20px;
 }
 #pt-desc{
     text-align: center;
     padding-left: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 #or-desc{
     text-align: center;
@@ -124,6 +123,7 @@ nav ul li a:hover::after{
     width: 90%;
     border-radius: 10px;
     display: block;
+    margin-bottom: 30px;
 }
 
 
