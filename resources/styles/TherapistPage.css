@@ -72,3 +72,20 @@ nav ul li a:hover::after{
 #signup-btn{
     color: #5c0096;
 }
+#TherapistCards{
+    margin-left: 100px;
+}
+table, tr{
+    border: 1px solid;
+}
+#bio{
+    max-width:865px;
+    word-wrap:break-word;
+}
+#TherapistCards{
+    margin-top: 80px;
+}
+#header{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}

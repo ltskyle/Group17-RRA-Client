@@ -72,3 +72,6 @@ nav ul li a:hover::after{
 #signup-btn{
     color: #5c0096;
 }
+#welcome{
+    font-family: 'Poppins', sans-serif;
+}
