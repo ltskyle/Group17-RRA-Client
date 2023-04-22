@@ -16,7 +16,6 @@ async function getVal() {
 }
 
 const makeTable = (dates, datePicked) => {
-    console.log(user)
     document.getElementById('id').innerHTML = ''
     let table = document.createElement('TABLE')
     table.border = '.5'
