@@ -117,7 +117,8 @@ const makeAppointment = async (scheduleID) => {
                 AppointmentZipCode: user.clientZipCode,
                 TherapistName: finding.therapistName,
                 ClientFirstName: user.clientFirstName,
-                ClientLastName: user.clientLastName
+                ClientLastName: user.clientLastName,
+                TimeFrame: finding.timeFrame
             }
             await fetch(appointmentURL, {
                 method: 'POST',
