@@ -36,20 +36,18 @@ const makeTable = (top5) => {
     tr.appendChild(th2)
 
     top5.forEach((therapist) => {
-        if(user.clientFirstName == therapist.clientFirstName && user.clientLastName == therapist.clientLastName)  {
-            let tr = document.createElement('TR')
-            tableBody.appendChild(tr)
+        let tr = document.createElement('TR')
+        tableBody.appendChild(tr)
 
-            let td1 = document.createElement('TD')
-            td1.width = 200
-            td1.appendChild(document.createTextNode(`${therapist.therapistName}`))
-            tr.appendChild(td1)
+        let td1 = document.createElement('TD')
+        td1.width = 200
+        td1.appendChild(document.createTextNode(`${therapist.therapistName}`))
+        tr.appendChild(td1)
 
-            let td2 = document.createElement('TD')
-            td2.width = 60
-            td2.appendChild(document.createTextNode(`${therapist.count}`))
-            tr.appendChild(td2)
-        }
+        let td2 = document.createElement('TD')
+        td2.width = 60
+        td2.appendChild(document.createTextNode(`${therapist.count}`))
+        tr.appendChild(td2)
     })
     app.appendChild(table)
 }

@@ -131,3 +131,7 @@ tr{
     font-family: 'Poppins', sans-serif;
     font-size: x-large;
 }
+#test{
+    margin-left: -155px;
+    margin-right: -100px;
+}

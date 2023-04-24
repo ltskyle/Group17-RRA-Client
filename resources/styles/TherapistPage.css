@@ -89,3 +89,7 @@ table, tr{
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
+#test{
+    margin-left: -155px;
+    margin-right: -100px;
+}
