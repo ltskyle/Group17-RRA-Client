@@ -12,6 +12,7 @@ async function getVal() {
         })
         .then(function (data) {
             makeTable(data, date)
+            console.log(user)
         })
 }
 
@@ -105,7 +106,7 @@ const makeAppointment = async (scheduleID) => {
         })
         .then(async function (data) {
             finding = data.find((data) => data.scheduleID == scheduleID)
-
+            console.log(user)
             let appointment = {
                 TypeOfService: finding.typeOfService,
                 Rating: 0,
@@ -118,7 +119,8 @@ const makeAppointment = async (scheduleID) => {
                 TherapistName: finding.therapistName,
                 ClientFirstName: user.clientFirstName,
                 ClientLastName: user.clientLastName,
-                TimeFrame: finding.timeFrame
+                TimeFrame: finding.timeFrame,
+                ClientAddress: user.clientAddress
             }
             await fetch(appointmentURL, {
                 method: 'POST',

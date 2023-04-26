@@ -23,6 +23,7 @@ const createClient = async () => {
         ClientCity: document.getElementById('city').value,
         ClientState: value,
         ClientZipCode: document.getElementById('zipcode').value,
+        ClientAddress: document.getElementById('address').value,
     }
     await fetch(clientURL, {
         method: 'POST',
