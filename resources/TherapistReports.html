@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointments</title>
-    <link rel="icon" href="./images/Schedule1.png">
-    <link rel="stylesheet" href="./styles/appointments.css">
+    <title>Reports</title>
+    <link rel="icon" href="./images/reports.png">
+    <link rel="stylesheet" href="./styles/TherapistReports.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-</head>
-<body id="app" onload="Appointments()">
+    
+  </head>
+<body id="app">
     <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
       </a>
-
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="./TherapistLogin.html" id="go-home" class="nav-link px-2 link-secondary">Home</a></li>
+      <div ID="test">
+      <ul id="test" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+       <li><a href="./TherapistLogin.html" id="go-home" class="nav-link px-2 link-dark">Home</a></li>
         <li><a href="./TherapistsAppointments.html" id="schedule" class="nav-link px-2 link-dark">Your Appointments</a></li>
         <li><a href="./TherapistReports.html" id="go-home" class="nav-link px-2 link-dark">Reports</a></li>
-      </ul>
+        </ul>
+        </div>
+
 
       <div class="col-md-3 text-end">
-        <button id="login-btn" type="button" class="btn"onclick="window.location.href='../index.html'">Logout</button>
+        <button id="login-btn" type="button" class="btn" onclick="window.location.href='../index.html'">Logout</button>
       </div>
     </header>
   </div>
-  <div id="welcome">
-    <h1>Here, you can view your appointments<br>and update the status!</h1>
+  <button id="top-5-btn" type="top-button" class="t-btn" onclick="TopServices()">Most Scheduled Services</button>
+  <div id="id">
+      
   </div>
-  <div id="id"></div>
-    <script src="./scripts/therapistsApps.js"></script>
+
+  <script src="./scripts/TherapistReports.js"></script>
 </body>
 </html>
