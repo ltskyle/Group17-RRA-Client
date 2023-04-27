@@ -103,10 +103,12 @@ table,th,td,tr {
     margin-right:auto;
     margin-bottom: 30px;
     border-style: groove;
+    margin-top: 30px;
+    vertical-align: middle;
 }
-tr{
+/* tr{
     margin-top: 200px;
-}
+} */
 
 .btn-info{
     box-shadow:inset 0px 1px 0px 0px #5c0096;
