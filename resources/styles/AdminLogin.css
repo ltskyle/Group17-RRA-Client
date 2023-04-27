@@ -72,3 +72,17 @@ nav ul li a:hover::after{
 #signup-btn{
     color: #5c0096;
 }
+h1, p {
+    text-align: center;
+}
+#img {
+    margin-left: auto;
+    margin-top: -20px;
+    margin-right: auto;
+    width:540px;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border: 2px solid #8b7699;
+    border-radius: 7px;
+}
